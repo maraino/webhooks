@@ -55,7 +55,9 @@ func (srv *Webhook) devices(w http.ResponseWriter, r *http.Request) {
 			httpError(w, http.StatusInternalServerError, err)
 			return
 		}
-		device = &types.Device{}
+		device = &types.Device{
+			ID: body.AttestationData.PermanentIdentifier,
+		}
 	}
 
 	resp := &types.ResponseBody{
