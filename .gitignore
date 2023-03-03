@@ -4,6 +4,12 @@
 *.dll
 *.so
 *.dylib
+bin/
+db/database.sqlite3
+
+# Go Workspaces
+go.work
+go.work.sum
 
 # Test binary, built with `go test -c`
 *.test
