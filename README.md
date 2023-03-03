@@ -17,6 +17,9 @@ go build -o bin/webhooks main.go
 dbmate --url "sqlite:db/database.sqlite3" --no-dump-schema up
 ```
 
+In the second command, we are using the database migration tool
+[dbmate](https://github.com/amacneil/dbmate) to setup the database.
+
 ## Running Webhooks
 
 Webhooks can run with or without TLS support. For this example, we will use TLS,
